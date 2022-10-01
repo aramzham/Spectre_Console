@@ -55,7 +55,6 @@ AnsiConsole.Markup("[#ff0000]Bar[/] ");
 AnsiConsole.MarkupLine("[rgb(255,0,0)]Baz[/] ");
 
 // clickable link
-
 AnsiConsole.MarkupLine("[link]https://aramzham.github.io/[/]");
 AnsiConsole.MarkupLine("[link=https://aramzham.github.io/]Visit my portfolio website[/]");
 

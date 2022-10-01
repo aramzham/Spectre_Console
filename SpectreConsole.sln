@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpectreConsole.Markup", "SpectreConsole.Markup\SpectreConsole.Markup.csproj", "{7EE687F4-E954-44FA-9707-55E6A00FA408}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpectreConsole.Exceptions", "SpectreConsole.Exceptions\SpectreConsole.Exceptions.csproj", "{C2E3CF4D-4971-46C3-A81F-3DDDAF46DC89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpectreConsole.Live", "SpectreConsole.Live\SpectreConsole.Live.csproj", "{A0A5B4D2-E8E5-48AB-B7C8-F82D7AE6C086}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{7EE687F4-E954-44FA-9707-55E6A00FA408}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EE687F4-E954-44FA-9707-55E6A00FA408}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EE687F4-E954-44FA-9707-55E6A00FA408}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2E3CF4D-4971-46C3-A81F-3DDDAF46DC89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2E3CF4D-4971-46C3-A81F-3DDDAF46DC89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2E3CF4D-4971-46C3-A81F-3DDDAF46DC89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2E3CF4D-4971-46C3-A81F-3DDDAF46DC89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0A5B4D2-E8E5-48AB-B7C8-F82D7AE6C086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0A5B4D2-E8E5-48AB-B7C8-F82D7AE6C086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0A5B4D2-E8E5-48AB-B7C8-F82D7AE6C086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0A5B4D2-E8E5-48AB-B7C8-F82D7AE6C086}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
