@@ -1,46 +1,52 @@
-﻿// table
+﻿// Create the tree
 
 using Spectre.Console;
 
-var table = new Table();
+var root = new Tree("Root");
 
-table.AddColumn("Foo");
-table.AddColumn(new TableColumn("Bar").Centered());
+// Add some nodes
+var foo = root.AddNode("[yellow]Foo[/]");
+var table = foo.AddNode(new Table()
+    .RoundedBorder()
+    .AddColumn("First")
+    .AddColumn("Second")
+    .AddRow("1", "2")
+    .AddRow("3", "4")
+    .AddRow("5", "6"));
 
-table.AddRow("Baz", "[green]Qux[/]");
-table.AddRow(new Markup("[blue]Corgi[/]"), new Panel("Waldo"));
-table.AddRow("Didier", "[red]Drogba[/]");
+table.AddNode("[blue]Baz[/]");
+foo.AddNode("Qux");
 
-// borders
-// table.Border(TableBorder.None);
-table.Border(TableBorder.AsciiDoubleHead);
-// table.Border(TableBorder.Square);
-// table.Border(TableBorder.Rounded);
+var bar = root.AddNode("[yellow]Bar[/]");
+bar.AddNode(new Calendar(2020, 12)
+    .AddCalendarEvent(2020, 9, 27)
+    .HideHeader());
 
-// expand/collapse
-table.Expand();
-// table.Collapse();
+root.AddNode("Label").Collapse();
 
-table.HideHeaders();
+// Render the tree
+AnsiConsole.Write(root);
 
-table.Width(50);
+var rootTree1 = new Tree("Root").Style("white on red");
+rootTree1.AddNode("branch");
+AnsiConsole.Write(rootTree1);
 
-// alignment
-// table.Alignment(Justify.Right);
-// table.RightAligned();
-table.Centered();
-// table.LeftAligned();
+// ASCII guide lines
+var rootTree2 = new Tree("Root").Guide(TreeGuide.Ascii);
+rootTree2.AddNode("branch");
+AnsiConsole.Write(rootTree2);
 
-// padding
-// table.Columns[0].PadLeft(3);
-// table.Columns[0].PadRight(5);
-// table.Columns[0].Padding(4, 0);
+// Default guide lines
+var rootTree3 = new Tree("Root").Guide(TreeGuide.Line);
+rootTree3.AddNode("branch");
+AnsiConsole.Write(rootTree3);
 
-// Or chained together
-table.Columns[0].PadLeft(3).PadRight(5);
+// Double guide lines
+var rootTree4 = new Tree("Root").Guide(TreeGuide.DoubleLine);
+rootTree4.AddNode("branch");
+AnsiConsole.Write(rootTree4);
 
-table.Columns[1].NoWrap();
-
-table.Columns[0].Width(15);
-
-AnsiConsole.Write(table);
+// Bold guide lines
+var rootTree5 = new Tree("Root").Guide(TreeGuide.BoldLine);
+rootTree5.AddNode("branch");
+AnsiConsole.Write(rootTree5);
