@@ -7,3 +7,11 @@ tree.Start();
 // bar chart
 var barChart = new BarChartExample();
 barChart.Start();
+
+// breakdown charts
+var bdCharts = new BreakdownChartExample();
+bdCharts.Start();
+
+// rule
+var rule = new RuleExample();
+rule.Start();
